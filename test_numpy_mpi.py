@@ -12,7 +12,7 @@ def main():
     mean = manager.calculate_mean(local_data)
 
     if rank == 0:
-        print(f"--- Validação NumPy + MPI ---")
+        print("--- Validação NumPy + MPI ---")
         print(f"Média Global calculada: {mean}")
         # Para 2 processos (Rank 0 e 1), a média de [0,0,1,1] deve ser 0.5
 
