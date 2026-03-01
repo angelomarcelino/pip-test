@@ -1,5 +1,6 @@
 #include "../include/mpi_core.hpp"
 #include <mpi.h>
+#include <numeric> 
 
 namespace mpi_wrapper {
     MpiManager::MpiManager() {
@@ -43,5 +44,19 @@ namespace mpi_wrapper {
         }
         
         return std::string(name, len);
+    }
+
+    double MpiManager::global_mean(const double* data, int size) {
+        double local_sum = std::accumulate(data, data + size, 0.0);
+        double global_sum = 0.0;
+        int global_count = 0;
+
+        // Soma todos os valores de todos os processos
+        MPI_Allreduce(&local_sum, &global_sum, 1, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
+        
+        // Soma a contagem total de elementos
+        MPI_Allreduce(&size, &global_count, 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
+
+        return (global_count > 0) ? (global_sum / global_count) : 0.0;
     }
 }

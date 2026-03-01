@@ -295,16 +295,34 @@ body.cython { font-family: courier; font-size: 12; }
     Click on a line that starts with a "<code>+</code>" to see the C code that Cython generated for it.
 </p>
 <p>Raw output: <a href="bridge.cpp">bridge.cpp</a></p>
-<div class="cython"><pre class="cython line score-8" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">01</span>: from .bridge cimport MpiManager</pre>
-<pre class='cython code score-8 '>  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyDict_NewPresized</span>(0);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
-  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_mstate_global-&gt;__pyx_d, __pyx_mstate_global-&gt;__pyx_n_u_test, __pyx_t_2) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 1, __pyx_L1_error)</span>
-  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">02</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">03</span>: cdef class PyMpiManager:</pre>
-<pre class="cython line score-0">&#xA0;<span class="">04</span>:     cdef MpiManager* cpp_obj</pre>
-<pre class="cython line score-0">&#xA0;<span class="">05</span>: </pre>
-<pre class="cython line score-16" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">06</span>:     def __cinit__(self):</pre>
+<div class="cython"><pre class="cython line score-16" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">01</span>: import numpy as np</pre>
+<pre class='cython code score-16 '>  __pyx_t_1 = <span class='pyx_c_api'>__Pyx_Import</span>(__pyx_mstate_global-&gt;__pyx_n_u_numpy, 0, 0, NULL, 0);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)</span>
+  __pyx_t_4 = __pyx_t_1;
+  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
+  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_mstate_global-&gt;__pyx_d, __pyx_mstate_global-&gt;__pyx_n_u_np, __pyx_t_4) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 1, __pyx_L1_error)</span>
+  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
+/* … */
+  __pyx_t_4 = <span class='pyx_c_api'>__Pyx_PyDict_NewPresized</span>(0);<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1, __pyx_L1_error)</span>
+  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
+  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_mstate_global-&gt;__pyx_d, __pyx_mstate_global-&gt;__pyx_n_u_test, __pyx_t_4) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 1, __pyx_L1_error)</span>
+  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
+</pre><pre class="cython line score-0">&#xA0;<span class="">02</span>: cimport numpy as cnp</pre>
+<pre class="cython line score-0">&#xA0;<span class="">03</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">04</span>: # ESSENCIAL: Inicializa a API C do NumPy para evitar Segmentation Faults</pre>
+<pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">05</span>: cnp.import_array()</pre>
+<pre class='cython code score-0 '>  __pyx_t_9 = __pyx_f_5numpy_import_array();<span class='error_goto'> if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 5, __pyx_L1_error)</span>
+</pre><pre class="cython line score-0">&#xA0;<span class="">06</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">07</span>: from .bridge cimport MpiManager</pre>
+<pre class="cython line score-0">&#xA0;<span class="">08</span>: </pre>
+<pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">09</span>: cdef class PyMpiManager:</pre>
+<pre class='cython code score-0 '>struct __pyx_obj_10pudimi_mpi_6bridge_PyMpiManager {
+  PyObject_HEAD
+  mpi_wrapper::MpiManager *cpp_obj;
+};
+
+</pre><pre class="cython line score-0">&#xA0;<span class="">10</span>:     cdef MpiManager* cpp_obj</pre>
+<pre class="cython line score-0">&#xA0;<span class="">11</span>: </pre>
+<pre class="cython line score-16" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">12</span>:     def __cinit__(self):</pre>
 <pre class='cython code score-16 '>/* Python wrapper */
 static int __pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static int __pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
@@ -342,16 +360,16 @@ static int __pyx_pf_10pudimi_mpi_6bridge_12PyMpiManager___cinit__(struct __pyx_o
   __pyx_L0:;
   return __pyx_r;
 }
-</pre><pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">07</span>:         self.cpp_obj = new MpiManager()</pre>
+</pre><pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">13</span>:         self.cpp_obj = new MpiManager()</pre>
 <pre class='cython code score-0 '>  try {
     __pyx_t_1 = new mpi_wrapper::MpiManager();
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    <span class='error_goto'>__PYX_ERR(0, 7, __pyx_L1_error)</span>
+    <span class='error_goto'>__PYX_ERR(0, 13, __pyx_L1_error)</span>
   }
   __pyx_v_self-&gt;cpp_obj = __pyx_t_1;
-</pre><pre class="cython line score-0">&#xA0;<span class="">08</span>: </pre>
-<pre class="cython line score-2" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">09</span>:     def __dealloc__(self):</pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">14</span>: </pre>
+<pre class="cython line score-2" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">15</span>:     def __dealloc__(self):</pre>
 <pre class='cython code score-2 '>/* Python wrapper */
 static void __pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_3__dealloc__(PyObject *__pyx_v_self); /*proto*/
 static void __pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_3__dealloc__(PyObject *__pyx_v_self) {
@@ -369,20 +387,95 @@ static void __pyx_pf_10pudimi_mpi_6bridge_12PyMpiManager_2__dealloc__(struct __p
 /* … */
   /* function exit code */
 }
-</pre><pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">10</span>:         del self.cpp_obj</pre>
+</pre><pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">16</span>:         del self.cpp_obj</pre>
 <pre class='cython code score-0 '>  delete __pyx_v_self-&gt;cpp_obj;
-</pre><pre class="cython line score-0">&#xA0;<span class="">11</span>: </pre>
-<pre class="cython line score-30" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">12</span>:     def get_info(self):</pre>
-<pre class='cython code score-30 '>/* Python wrapper */
-static PyObject *__pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_5get_info(PyObject *__pyx_v_self, 
+</pre><pre class="cython line score-0">&#xA0;<span class="">17</span>: </pre>
+<pre class="cython line score-28" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">18</span>:     def get_rank(self):</pre>
+<pre class='cython code score-28 '>/* Python wrapper */
+static PyObject *__pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_5get_rank(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_10pudimi_mpi_6bridge_12PyMpiManager_5get_info = {"get_info", (PyCFunction)(void(*)(void))(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_5get_info, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_5get_info(PyObject *__pyx_v_self, 
+<span class='py_macro_api'>PyDoc_STRVAR</span>(__pyx_doc_10pudimi_mpi_6bridge_12PyMpiManager_4get_rank, "Retorna o rank do processo atual.");
+static PyMethodDef __pyx_mdef_10pudimi_mpi_6bridge_12PyMpiManager_5get_rank = {"get_rank", (PyCFunction)(void(*)(void))(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_5get_rank, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_10pudimi_mpi_6bridge_12PyMpiManager_4get_rank};
+static PyObject *__pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_5get_rank(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject *__pyx_r = 0;
+  <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
+  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("get_rank (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_SIZE
+  __pyx_nargs = <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args);
+  #else
+  __pyx_nargs = <span class='py_c_api'>PyTuple_Size</span>(__pyx_args); if (unlikely(__pyx_nargs &lt; 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = <span class='pyx_c_api'>__Pyx_KwValues_FASTCALL</span>(__pyx_args, __pyx_nargs);
+  if (unlikely(__pyx_nargs &gt; 0)) { <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("get_rank", 1, 0, 0, __pyx_nargs); return NULL; }
+  const Py_ssize_t __pyx_kwds_len = unlikely(__pyx_kwds) ? <span class='pyx_c_api'>__Pyx_NumKwargs_FASTCALL</span>(__pyx_kwds) : 0;
+  if (unlikely(__pyx_kwds_len &lt; 0)) return NULL;
+  if (unlikely(__pyx_kwds_len &gt; 0)) {<span class='pyx_c_api'>__Pyx_RejectKeywords</span>("get_rank", __pyx_kwds); return NULL;}
+  __pyx_r = __pyx_pf_10pudimi_mpi_6bridge_12PyMpiManager_4get_rank(((struct __pyx_obj_10pudimi_mpi_6bridge_PyMpiManager *)__pyx_v_self));
+
+  /* function exit code */
+  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10pudimi_mpi_6bridge_12PyMpiManager_4get_rank(struct __pyx_obj_10pudimi_mpi_6bridge_PyMpiManager *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+/* … */
+  /* function exit code */
+  __pyx_L1_error:;
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_1);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("pudimi_mpi.bridge.PyMpiManager.get_rank", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
+  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
+  return __pyx_r;
+}
+/* … */
+  __pyx_t_4 = <span class='pyx_c_api'>__Pyx_CyFunction_New</span>(&amp;__pyx_mdef_10pudimi_mpi_6bridge_12PyMpiManager_5get_rank, __Pyx_CYFUNCTION_CCLASS, __pyx_mstate_global-&gt;__pyx_n_u_PyMpiManager_get_rank, NULL, __pyx_mstate_global-&gt;__pyx_n_u_pudimi_mpi_bridge, __pyx_mstate_global-&gt;__pyx_d, ((PyObject *)__pyx_mstate_global-&gt;__pyx_codeobj_tab[0]));<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 18, __pyx_L1_error)</span>
+  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
+  #if CYTHON_COMPILING_IN_CPYTHON &amp;&amp; PY_VERSION_HEX &gt;= 0x030E0000
+  <span class='py_c_api'>PyUnstable_Object_EnableDeferredRefcount</span>(__pyx_t_4);
+  #endif
+  if (<span class='pyx_c_api'>__Pyx_SetItemOnTypeDict</span>(__pyx_mstate_global-&gt;__pyx_ptype_10pudimi_mpi_6bridge_PyMpiManager, __pyx_mstate_global-&gt;__pyx_n_u_get_rank, __pyx_t_4) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 18, __pyx_L1_error)</span>
+  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
+</pre><pre class="cython line score-0">&#xA0;<span class="">19</span>:         """Retorna o rank do processo atual."""</pre>
+<pre class="cython line score-3" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">20</span>:         return self.cpp_obj.get_rank()</pre>
+<pre class='cython code score-3 '>  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
+  __pyx_t_1 = <span class='pyx_c_api'>__Pyx_PyLong_From_int</span>(__pyx_v_self-&gt;cpp_obj-&gt;get_rank());<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)</span>
+  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+</pre><pre class="cython line score-0">&#xA0;<span class="">21</span>: </pre>
+<pre class="cython line score-31" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">22</span>:     def get_info(self):</pre>
+<pre class='cython code score-31 '>/* Python wrapper */
+static PyObject *__pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_7get_info(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+<span class='py_macro_api'>PyDoc_STRVAR</span>(__pyx_doc_10pudimi_mpi_6bridge_12PyMpiManager_6get_info, "Retorna uma string formatada com rank e nome do host.");
+static PyMethodDef __pyx_mdef_10pudimi_mpi_6bridge_12PyMpiManager_7get_info = {"get_info", (PyCFunction)(void(*)(void))(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_7get_info, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_10pudimi_mpi_6bridge_12PyMpiManager_6get_info};
+static PyObject *__pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_7get_info(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -408,14 +501,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   const Py_ssize_t __pyx_kwds_len = unlikely(__pyx_kwds) ? <span class='pyx_c_api'>__Pyx_NumKwargs_FASTCALL</span>(__pyx_kwds) : 0;
   if (unlikely(__pyx_kwds_len &lt; 0)) return NULL;
   if (unlikely(__pyx_kwds_len &gt; 0)) {<span class='pyx_c_api'>__Pyx_RejectKeywords</span>("get_info", __pyx_kwds); return NULL;}
-  __pyx_r = __pyx_pf_10pudimi_mpi_6bridge_12PyMpiManager_4get_info(((struct __pyx_obj_10pudimi_mpi_6bridge_PyMpiManager *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10pudimi_mpi_6bridge_12PyMpiManager_6get_info(((struct __pyx_obj_10pudimi_mpi_6bridge_PyMpiManager *)__pyx_v_self));
 
   /* function exit code */
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10pudimi_mpi_6bridge_12PyMpiManager_4get_info(struct __pyx_obj_10pudimi_mpi_6bridge_PyMpiManager *__pyx_v_self) {
+static PyObject *__pyx_pf_10pudimi_mpi_6bridge_12PyMpiManager_6get_info(struct __pyx_obj_10pudimi_mpi_6bridge_PyMpiManager *__pyx_v_self) {
   int __pyx_v_rank;
   PyObject *__pyx_v_name = NULL;
   PyObject *__pyx_r = NULL;
@@ -434,35 +527,175 @@ static PyObject *__pyx_pf_10pudimi_mpi_6bridge_12PyMpiManager_4get_info(struct _
   return __pyx_r;
 }
 /* … */
-  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_CyFunction_New</span>(&amp;__pyx_mdef_10pudimi_mpi_6bridge_12PyMpiManager_5get_info, __Pyx_CYFUNCTION_CCLASS, __pyx_mstate_global-&gt;__pyx_n_u_PyMpiManager_get_info, NULL, __pyx_mstate_global-&gt;__pyx_n_u_pudimi_mpi_bridge, __pyx_mstate_global-&gt;__pyx_d, ((PyObject *)__pyx_mstate_global-&gt;__pyx_codeobj_tab[0]));<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
+  __pyx_t_4 = <span class='pyx_c_api'>__Pyx_CyFunction_New</span>(&amp;__pyx_mdef_10pudimi_mpi_6bridge_12PyMpiManager_7get_info, __Pyx_CYFUNCTION_CCLASS, __pyx_mstate_global-&gt;__pyx_n_u_PyMpiManager_get_info, NULL, __pyx_mstate_global-&gt;__pyx_n_u_pudimi_mpi_bridge, __pyx_mstate_global-&gt;__pyx_d, ((PyObject *)__pyx_mstate_global-&gt;__pyx_codeobj_tab[1]));<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 22, __pyx_L1_error)</span>
+  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
   #if CYTHON_COMPILING_IN_CPYTHON &amp;&amp; PY_VERSION_HEX &gt;= 0x030E0000
-  <span class='py_c_api'>PyUnstable_Object_EnableDeferredRefcount</span>(__pyx_t_2);
+  <span class='py_c_api'>PyUnstable_Object_EnableDeferredRefcount</span>(__pyx_t_4);
   #endif
-  if (<span class='pyx_c_api'>__Pyx_SetItemOnTypeDict</span>(__pyx_mstate_global-&gt;__pyx_ptype_10pudimi_mpi_6bridge_PyMpiManager, __pyx_mstate_global-&gt;__pyx_n_u_get_info, __pyx_t_2) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L1_error)</span>
-  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
-</pre><pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">13</span>:         rank = self.cpp_obj.get_rank()</pre>
+  if (<span class='pyx_c_api'>__Pyx_SetItemOnTypeDict</span>(__pyx_mstate_global-&gt;__pyx_ptype_10pudimi_mpi_6bridge_PyMpiManager, __pyx_mstate_global-&gt;__pyx_n_u_get_info, __pyx_t_4) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 22, __pyx_L1_error)</span>
+  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
+</pre><pre class="cython line score-0">&#xA0;<span class="">23</span>:         """Retorna uma string formatada com rank e nome do host."""</pre>
+<pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">24</span>:         rank = self.cpp_obj.get_rank()</pre>
 <pre class='cython code score-0 '>  __pyx_v_rank = __pyx_v_self-&gt;cpp_obj-&gt;get_rank();
-</pre><pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">14</span>:         name = self.cpp_obj.get_processor_name().decode('utf-8')</pre>
-<pre class='cython code score-0 '>  __pyx_t_1 = __Pyx_decode_cpp_string(__pyx_v_self-&gt;cpp_obj-&gt;get_processor_name(), 0, PY_SSIZE_T_MAX, NULL, NULL, PyUnicode_DecodeUTF8);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)</span>
+</pre><pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">25</span>:         name = self.cpp_obj.get_processor_name().decode('utf-8')</pre>
+<pre class='cython code score-0 '>  __pyx_t_1 = __Pyx_decode_cpp_string(__pyx_v_self-&gt;cpp_obj-&gt;get_processor_name(), 0, PY_SSIZE_T_MAX, NULL, NULL, PyUnicode_DecodeUTF8);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
   __pyx_v_name = __pyx_t_1;
   __pyx_t_1 = 0;
-</pre><pre class="cython line score-15" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">15</span>:         return f"Rank {rank} executando em {name}"</pre>
+</pre><pre class="cython line score-15" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">26</span>:         return f"Rank {rank} executando em {name}"</pre>
 <pre class='cython code score-15 '>  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
-  __pyx_t_1 = <span class='pyx_c_api'>__Pyx_PyUnicode_From_int</span>(__pyx_v_rank, 0, ' ', 'd');<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)</span>
+  __pyx_t_1 = <span class='pyx_c_api'>__Pyx_PyUnicode_From_int</span>(__pyx_v_rank, 0, ' ', 'd');<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
-  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyObject_FormatSimple</span>(__pyx_v_name, __pyx_mstate_global-&gt;__pyx_empty_unicode);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 15, __pyx_L1_error)</span>
+  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyObject_FormatSimple</span>(__pyx_v_name, __pyx_mstate_global-&gt;__pyx_empty_unicode);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 26, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
   __pyx_t_3[0] = __pyx_mstate_global-&gt;__pyx_kp_u_Rank;
   __pyx_t_3[1] = __pyx_t_1;
   __pyx_t_3[2] = __pyx_mstate_global-&gt;__pyx_kp_u_executando_em;
   __pyx_t_3[3] = __pyx_t_2;
   __pyx_t_4 = <span class='pyx_c_api'>__Pyx_PyUnicode_Join</span>(__pyx_t_3, 4, 5 + <span class='pyx_c_api'>__Pyx_PyUnicode_GET_LENGTH</span>(__pyx_t_1) + 15 + <span class='pyx_c_api'>__Pyx_PyUnicode_GET_LENGTH</span>(__pyx_t_2), 127 | <span class='pyx_c_api'>__Pyx_PyUnicode_MAX_CHAR_VALUE</span>(__pyx_t_2));
-  if (unlikely(!__pyx_t_4)) <span class='error_goto'>__PYX_ERR(0, 15, __pyx_L1_error)</span>
+  if (unlikely(!__pyx_t_4)) <span class='error_goto'>__PYX_ERR(0, 26, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_1); __pyx_t_1 = 0;
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_r = __pyx_t_4;
+  __pyx_t_4 = 0;
+  goto __pyx_L0;
+</pre><pre class="cython line score-0">&#xA0;<span class="">27</span>: </pre>
+<pre class="cython line score-38" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">28</span>:     def calculate_mean(self, double[:] data):</pre>
+<pre class='cython code score-38 '>/* Python wrapper */
+static PyObject *__pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_9calculate_mean(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+<span class='py_macro_api'>PyDoc_STRVAR</span>(__pyx_doc_10pudimi_mpi_6bridge_12PyMpiManager_8calculate_mean, "Recebe um array NumPy e retorna a m\303\251dia global via MPI Allreduce.");
+static PyMethodDef __pyx_mdef_10pudimi_mpi_6bridge_12PyMpiManager_9calculate_mean = {"calculate_mean", (PyCFunction)(void(*)(void))(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_9calculate_mean, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_10pudimi_mpi_6bridge_12PyMpiManager_8calculate_mean};
+static PyObject *__pyx_pw_10pudimi_mpi_6bridge_12PyMpiManager_9calculate_mean(PyObject *__pyx_v_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  __Pyx_memviewslice __pyx_v_data = { 0, 0, { 0 }, { 0 }, { 0 } };
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject *__pyx_r = 0;
+  <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
+  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("calculate_mean (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_SIZE
+  __pyx_nargs = <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args);
+  #else
+  __pyx_nargs = <span class='py_c_api'>PyTuple_Size</span>(__pyx_args); if (unlikely(__pyx_nargs &lt; 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = <span class='pyx_c_api'>__Pyx_KwValues_FASTCALL</span>(__pyx_args, __pyx_nargs);
+  {
+    PyObject ** const __pyx_pyargnames[] = {&amp;__pyx_mstate_global-&gt;__pyx_n_u_data,0};
+  PyObject* values[1] = {0};
+    const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? <span class='pyx_c_api'>__Pyx_NumKwargs_FASTCALL</span>(__pyx_kwds) : 0;
+    if (unlikely(__pyx_kwds_len) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 28, __pyx_L3_error)</span>
+    if (__pyx_kwds_len &gt; 0) {
+      switch (__pyx_nargs) {
+        case  1:
+        values[0] = <span class='pyx_c_api'>__Pyx_ArgRef_FASTCALL</span>(__pyx_args, 0);
+        if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[0])) <span class='error_goto'>__PYX_ERR(0, 28, __pyx_L3_error)</span>
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      const Py_ssize_t kwd_pos_args = __pyx_nargs;
+      if (<span class='pyx_c_api'>__Pyx_ParseKeywords</span>(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "calculate_mean", 0) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 28, __pyx_L3_error)</span>
+      for (Py_ssize_t i = __pyx_nargs; i &lt; 1; i++) {
+        if (unlikely(!values[i])) { <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("calculate_mean", 1, 1, 1, i); <span class='error_goto'>__PYX_ERR(0, 28, __pyx_L3_error)</span> }
+      }
+    } else if (unlikely(__pyx_nargs != 1)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = <span class='pyx_c_api'>__Pyx_ArgRef_FASTCALL</span>(__pyx_args, 0);
+      if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[0])) <span class='error_goto'>__PYX_ERR(0, 28, __pyx_L3_error)</span>
+    }
+    __pyx_v_data = <span class='pyx_c_api'>__Pyx_PyObject_to_MemoryviewSlice_ds_double</span>(values[0], PyBUF_WRITABLE);<span class='error_goto'> if (unlikely(!__pyx_v_data.memview)) __PYX_ERR(0, 28, __pyx_L3_error)</span>
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("calculate_mean", 1, 1, 1, __pyx_nargs); <span class='error_goto'>__PYX_ERR(0, 28, __pyx_L3_error)</span>
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  for (Py_ssize_t __pyx_temp=0; __pyx_temp &lt; (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+    Py_XDECREF(values[__pyx_temp]);
+  }
+  __PYX_XCLEAR_MEMVIEW(&amp;__pyx_v_data, 1);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("pudimi_mpi.bridge.PyMpiManager.calculate_mean", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_10pudimi_mpi_6bridge_12PyMpiManager_8calculate_mean(((struct __pyx_obj_10pudimi_mpi_6bridge_PyMpiManager *)__pyx_v_self), __pyx_v_data);
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+
+  /* function exit code */
+  for (Py_ssize_t __pyx_temp=0; __pyx_temp &lt; (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+    Py_XDECREF(values[__pyx_temp]);
+  }
+  __PYX_XCLEAR_MEMVIEW(&amp;__pyx_v_data, 1);
+  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10pudimi_mpi_6bridge_12PyMpiManager_8calculate_mean(struct __pyx_obj_10pudimi_mpi_6bridge_PyMpiManager *__pyx_v_self, __Pyx_memviewslice __pyx_v_data) {
+  PyObject *__pyx_r = NULL;
+/* … */
+  /* function exit code */
+  __pyx_L1_error:;
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_4);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("pudimi_mpi.bridge.PyMpiManager.calculate_mean", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
+  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
+  return __pyx_r;
+}
+/* … */
+  __pyx_t_4 = <span class='pyx_c_api'>__Pyx_CyFunction_New</span>(&amp;__pyx_mdef_10pudimi_mpi_6bridge_12PyMpiManager_9calculate_mean, __Pyx_CYFUNCTION_CCLASS, __pyx_mstate_global-&gt;__pyx_n_u_PyMpiManager_calculate_mean, NULL, __pyx_mstate_global-&gt;__pyx_n_u_pudimi_mpi_bridge, __pyx_mstate_global-&gt;__pyx_d, ((PyObject *)__pyx_mstate_global-&gt;__pyx_codeobj_tab[2]));<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 28, __pyx_L1_error)</span>
+  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
+  #if CYTHON_COMPILING_IN_CPYTHON &amp;&amp; PY_VERSION_HEX &gt;= 0x030E0000
+  <span class='py_c_api'>PyUnstable_Object_EnableDeferredRefcount</span>(__pyx_t_4);
+  #endif
+  if (<span class='pyx_c_api'>__Pyx_SetItemOnTypeDict</span>(__pyx_mstate_global-&gt;__pyx_ptype_10pudimi_mpi_6bridge_PyMpiManager, __pyx_mstate_global-&gt;__pyx_n_u_calculate_mean, __pyx_t_4) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 28, __pyx_L1_error)</span>
+  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
+</pre><pre class="cython line score-0">&#xA0;<span class="">29</span>:         """Recebe um array NumPy e retorna a média global via MPI Allreduce."""</pre>
+<pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">30</span>:         if data.shape[0] == 0:</pre>
+<pre class='cython code score-0 '>  __pyx_t_1 = ((__pyx_v_data.shape[0]) == 0);
+  if (__pyx_t_1) {
+/* … */
+  }
+</pre><pre class="cython line score-2" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">31</span>:             return 0.0</pre>
+<pre class='cython code score-2 '>    <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
+    <span class='pyx_macro_api'>__Pyx_INCREF</span>(__pyx_mstate_global-&gt;__pyx_float_0_0);
+    __pyx_r = __pyx_mstate_global-&gt;__pyx_float_0_0;
+    goto __pyx_L0;
+</pre><pre class="cython line score-8" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">32</span>:         return self.cpp_obj.global_mean(&amp;data[0], data.shape[0])</pre>
+<pre class='cython code score-8 '>  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
+  __pyx_t_2 = 0;
+  __pyx_t_3 = -1;
+  if (__pyx_t_2 &lt; 0) {
+    __pyx_t_2 += __pyx_v_data.shape[0];
+    if (unlikely(__pyx_t_2 &lt; 0)) __pyx_t_3 = 0;
+  } else if (unlikely(__pyx_t_2 &gt;= __pyx_v_data.shape[0])) __pyx_t_3 = 0;
+  if (unlikely(__pyx_t_3 != -1)) {
+    <span class='pyx_c_api'>__Pyx_RaiseBufferIndexError</span>(__pyx_t_3);
+    <span class='error_goto'>__PYX_ERR(0, 32, __pyx_L1_error)</span>
+  }
+  __pyx_t_4 = <span class='py_c_api'>PyFloat_FromDouble</span>(__pyx_v_self-&gt;cpp_obj-&gt;global_mean((&amp;(*((double *) ( /* dim=0 */ (__pyx_v_data.data + __pyx_t_2 * __pyx_v_data.strides[0]) )))), (__pyx_v_data.shape[0])));<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 32, __pyx_L1_error)</span>
+  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
   __pyx_r = __pyx_t_4;
   __pyx_t_4 = 0;
   goto __pyx_L0;

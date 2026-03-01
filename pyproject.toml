@@ -1,42 +1,59 @@
 [project]
 name = "pudimi-mpi"
 version = "0.1.0"
-description = "Wrapper C++ MPI transparente"
-authors = [{name = "Angelo Marcelino", email = "amc.marcelino.cordeiro@gmail.com"}]
+description = "Wrapper C++ MPI transparente com suporte a ULFM"
+authors = [
+    { name = "Angelo Marcelino", email = "amc.marcelino.cordeiro@gmail.com" },
+]
 readme = "README.md"
 requires-python = ">=3.11"
+# Dependências de runtime (o que o usuário final precisa)
+dependencies = ["numpy (<2.0)", "mpi4py (==3.1.4)", "setuptools (>=80.0.0)"]
 
 [tool.poetry]
-# O Poetry agora encontra a pasta 'pudimi_mpi' automaticamente na raiz
 packages = [{ include = "pudimi_mpi" }]
-
-# Incluímos os arquivos C++ para que o 'pip install' funcione em outras máquinas 
 include = [
     { path = "cpp_lib/include/*.hpp", format = "sdist" },
     { path = "cpp_lib/src/*.cpp", format = "sdist" },
-    { path = "pudimi_mpi/*.pxd", format = "sdist" }
+    { path = "pudimi_mpi/*.pxd", format = "sdist" },
+    { path = "pudimi_mpi/*.pyi", format = [
+        "sdist",
+        "wheel",
+    ] },
+    { path = "pudimi_mpi/py.typed", format = [
+        "sdist",
+        "wheel",
+    ] },
 ]
 build = "build.py"
 
 [build-system]
-requires = ["poetry-core>=2.0.0", "setuptools", "Cython"]
+# mpi4py e numpy DEVEM estar aqui para prover headers no build isolado
+requires = [
+    "poetry-core>=2.0.0",
+    "setuptools>=80.0.0",
+    "Cython>=3.0,<4.0",
+    "numpy<2.0",
+    "mpi4py==3.1.4",
+]
 build-backend = "poetry.core.masonry.api"
+
 [dependency-groups]
 dev = [
-    "cython (>=3.2.4,<4.0.0)",
-    "setuptools (>=82.0.0,<83.0.0)",
-    "stubgen-pyx (>=0.2.2,<0.3.0)",
+    "cython (>=3.0,<4.0)",
+    "setuptools (>=80.0.0)",
     "poethepoet (>=0.42.1,<0.43.0)",
     "ruff (>=0.15.4,<0.16.0)",
-    "mpi4py (>=4.1.1,<5.0.0)"
 ]
 
 [tool.poe.tasks]
-# Compila o C++ localmente na pasta para o Pylance enxergar o .so
+# Compila localmente usando o OpenMPI em /opt/openmpi-5.0.8
 build-ext = "python build.py build_ext --inplace"
 
-# Executa o seu script de testes usando 1 processo MPI
-run-test = "mpirun -n 1 python test_mpi.py"
+# Executa teste de redução com 2 processos para validar a comunicação
+run-test = "/opt/openmpi-5.0.8/bin/mpirun -n 2 python test_mpi.py"
 
-# Tarefa combinada: Roda o build e, se der certo, roda o teste
-test = ["build-ext", "run-test"]
+run-numpy-test = "/opt/openmpi-5.0.8/bin/mpirun -n 2 python test_numpy_mpi.py"
+
+# Tarefa completa: limpa, compila e testa
+test = ["build-ext", "run-test", "run-numpy-test"]

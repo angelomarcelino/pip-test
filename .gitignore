@@ -2,7 +2,6 @@
 
 repomix-output.*
 pudimi_mpi/*.cpp
-pudimi_mpi/*.pyi
 
 # Byte-compiled / optimized / DLL files
 
