@@ -1,6 +1,6 @@
 [project]
 name = "pudimi-mpi"
-version = "0.1.0"
+version = "0.1.1"
 description = "Wrapper C++ MPI transparente com suporte a ULFM"
 authors = [
     { name = "Angelo Marcelino", email = "amc.marcelino.cordeiro@gmail.com" },

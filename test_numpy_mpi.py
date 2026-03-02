@@ -1,4 +1,4 @@
-from pudimi_mpi.bridge import PyMpiManager
+from pudimi_mpi import PyMpiManager
 import numpy as np
 
 
