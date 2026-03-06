@@ -7,37 +7,42 @@ authors = [
 ]
 readme = "README.md"
 requires-python = ">=3.11"
-# Dependências de runtime (o que o usuário final precisa)
-dependencies = ["numpy (<2.0)", "mpi4py (==3.1.4)", "setuptools (>=80.0.0)"]
+
+dependencies = [
+    "numpy (<2.0)",
+    "mpi4py (>=3.1.5)"
+]
+
 
 [tool.poetry]
 packages = [{ include = "pudimi_mpi" }]
+
 include = [
     { path = "cpp_lib/include/*.hpp", format = "sdist" },
     { path = "cpp_lib/src/*.cpp", format = "sdist" },
     { path = "pudimi_mpi/*.pxd", format = "sdist" },
-    { path = "pudimi_mpi/*.pyi", format = [
-        "sdist",
-        "wheel",
-    ] },
-    { path = "pudimi_mpi/py.typed", format = [
-        "sdist",
-        "wheel",
-    ] },
-    { path = "pudimi_mpi/*.so", format = "wheel" },
+    { path = "pudimi_mpi/*.pyi", format = ["sdist", "wheel"] },
+    { path = "pudimi_mpi/py.typed", format = ["sdist", "wheel"] },
 ]
-build = "build.py"
+
 
 [build-system]
-# mpi4py e numpy DEVEM estar aqui para prover headers no build isolado
 requires = [
-    "poetry-core>=2.0.0",
-    "setuptools>=80.0.0",
-    "Cython>=3.0,<4.0",
+    "scikit-build-core>=0.9",
+    "cython>=3.0,<4.0",
     "numpy<2.0",
-    "mpi4py==3.1.4",
+    "mpi4py>=3.1.5",
 ]
-build-backend = "poetry.core.masonry.api"
+build-backend = "scikit_build_core.build"
+
+
+[tool.scikit-build]
+wheel.packages = ["pudimi_mpi"]
+
+[tool.scikit-build.cmake]
+minimum-version = "3.18"
+build-type = "Release"
+
 
 [dependency-groups]
 dev = [
@@ -47,14 +52,8 @@ dev = [
     "ruff (>=0.15.4,<0.16.0)",
 ]
 
+
 [tool.poe.tasks]
-# Compila localmente usando o OpenMPI em /opt/openmpi-5.0.8
-build-ext = "python build.py build_ext --inplace"
-
-# Executa teste de redução com 2 processos para validar a comunicação
-run-test = "/opt/openmpi-5.0.8/bin/mpirun -n 2 python test_mpi.py"
-
-run-numpy-test = "/opt/openmpi-5.0.8/bin/mpirun -n 2 python test_numpy_mpi.py"
-
-# Tarefa completa: limpa, compila e testa
-test = ["build-ext", "run-test", "run-numpy-test"]
+build-ext = "pip install -e ."
+test-mpi = "mpirun -n 2 python test_mpi.py"
+test-numpy = "mpirun -n 2 python test_numpy_mpi.py"

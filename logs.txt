@@ -1,0 +1,462 @@
+Loading configuration file /home/pudimi/.config/pypoetry/config.toml
+Building pudimi-mpi (0.1.3)
+Building sdist
+[virtualenv:virtualenv.discovery.builtin] find interpreter for spec PythonSpec(path=/home/pudimi/.local/share/pipx/venvs/poetry/bin/python)
+[virtualenv:virtualenv.info] filesystem is case-sensitive
+[filelock:filelock] Attempting to acquire lock 139914696564784 on /home/pudimi/.local/share/virtualenv/py_info/2/b8e4506b1962afc6c6c967c1f8ad57634ba1d86eacbe9d8aafd3730bb16569da.lock
+[filelock:filelock] Lock 139914696564784 acquired on /home/pudimi/.local/share/virtualenv/py_info/2/b8e4506b1962afc6c6c967c1f8ad57634ba1d86eacbe9d8aafd3730bb16569da.lock
+[virtualenv:virtualenv.app_data.via_disk_folder] got python info of /home/pudimi/.pyenv/versions/3.11.13/bin/python3.11 from /home/pudimi/.local/share/virtualenv/py_info/2/b8e4506b1962afc6c6c967c1f8ad57634ba1d86eacbe9d8aafd3730bb16569da.json
+[filelock:filelock] Attempting to release lock 139914696564784 on /home/pudimi/.local/share/virtualenv/py_info/2/b8e4506b1962afc6c6c967c1f8ad57634ba1d86eacbe9d8aafd3730bb16569da.lock
+[filelock:filelock] Lock 139914696564784 released on /home/pudimi/.local/share/virtualenv/py_info/2/b8e4506b1962afc6c6c967c1f8ad57634ba1d86eacbe9d8aafd3730bb16569da.lock
+[virtualenv:virtualenv.discovery.builtin] proposed PythonInfo(spec=CPython3.11.13.final.0-64, exe=/home/pudimi/.pyenv/versions/3.11.13/bin/python3.11, platform=linux, version='3.11.13 (main, Jun 16 2025, 10:41:54) [GCC 13.3.0]', encoding_fs_io=utf-8-utf-8)
+[virtualenv:virtualenv.discovery.builtin] accepted PythonInfo(spec=CPython3.11.13.final.0-64, exe=/home/pudimi/.pyenv/versions/3.11.13/bin/python3.11, platform=linux, version='3.11.13 (main, Jun 16 2025, 10:41:54) [GCC 13.3.0]', encoding_fs_io=utf-8-utf-8)
+[virtualenv:virtualenv.run.session] create virtual environment via CPython3Posix(dest=/tmp/tmpyo34piuy/.venv, clear=False, no_vcs_ignore=False, global=False)
+[virtualenv:virtualenv.util.path._sync] create folder /tmp/tmpyo34piuy/.venv/bin
+[virtualenv:virtualenv.util.path._sync] create folder /tmp/tmpyo34piuy/.venv/lib/python3.11/site-packages
+[virtualenv:virtualenv.create.pyenv_cfg] write /tmp/tmpyo34piuy/.venv/pyvenv.cfg
+[virtualenv:virtualenv.create.pyenv_cfg] 	home = /home/pudimi/.pyenv/versions/3.11.13/bin
+[virtualenv:virtualenv.create.pyenv_cfg] 	implementation = CPython
+[virtualenv:virtualenv.create.pyenv_cfg] 	version_info = 3.11.13.final.0
+[virtualenv:virtualenv.create.pyenv_cfg] 	virtualenv = 20.31.2
+[virtualenv:virtualenv.create.pyenv_cfg] 	include-system-site-packages = false
+[virtualenv:virtualenv.create.pyenv_cfg] 	base-prefix = /home/pudimi/.pyenv/versions/3.11.13
+[virtualenv:virtualenv.create.pyenv_cfg] 	base-exec-prefix = /home/pudimi/.pyenv/versions/3.11.13
+[virtualenv:virtualenv.create.pyenv_cfg] 	base-executable = /home/pudimi/.pyenv/versions/3.11.13/bin/python3.11
+[virtualenv:virtualenv.util.path._sync] symlink /home/pudimi/.pyenv/versions/3.11.13/bin/python3.11 to /tmp/tmpyo34piuy/.venv/bin/python
+[virtualenv:virtualenv.create.via_global_ref.api] create virtualenv import hook file /tmp/tmpyo34piuy/.venv/lib/python3.11/site-packages/_virtualenv.pth
+[virtualenv:virtualenv.create.via_global_ref.api] create /tmp/tmpyo34piuy/.venv/lib/python3.11/site-packages/_virtualenv.py
+[virtualenv:virtualenv.run.session] ============================== target debug ==============================
+[virtualenv:virtualenv.create.creator] debug via /tmp/tmpyo34piuy/.venv/bin/python /home/pudimi/.local/share/pipx/venvs/poetry/lib/python3.12/site-packages/virtualenv/create/debug.py
+[virtualenv:virtualenv.run.session] {
+[virtualenv:virtualenv.run.session]   "sys": {
+[virtualenv:virtualenv.run.session]     "executable": "/tmp/tmpyo34piuy/.venv/bin/python",
+[virtualenv:virtualenv.run.session]     "_base_executable": "/home/pudimi/.pyenv/versions/3.11.13/bin/python3.11",
+[virtualenv:virtualenv.run.session]     "prefix": "/tmp/tmpyo34piuy/.venv",
+[virtualenv:virtualenv.run.session]     "base_prefix": "/home/pudimi/.pyenv/versions/3.11.13",
+[virtualenv:virtualenv.run.session]     "real_prefix": null,
+[virtualenv:virtualenv.run.session]     "exec_prefix": "/tmp/tmpyo34piuy/.venv",
+[virtualenv:virtualenv.run.session]     "base_exec_prefix": "/home/pudimi/.pyenv/versions/3.11.13",
+[virtualenv:virtualenv.run.session]     "path": [
+[virtualenv:virtualenv.run.session]       "/home/pudimi/.pyenv/versions/3.11.13/lib/python311.zip",
+[virtualenv:virtualenv.run.session]       "/home/pudimi/.pyenv/versions/3.11.13/lib/python3.11",
+[virtualenv:virtualenv.run.session]       "/home/pudimi/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+[virtualenv:virtualenv.run.session]       "/tmp/tmpyo34piuy/.venv/lib/python3.11/site-packages"
+[virtualenv:virtualenv.run.session]     ],
+[virtualenv:virtualenv.run.session]     "meta_path": [
+[virtualenv:virtualenv.run.session]       "<class '_virtualenv._Finder'>",
+[virtualenv:virtualenv.run.session]       "<class '_frozen_importlib.BuiltinImporter'>",
+[virtualenv:virtualenv.run.session]       "<class '_frozen_importlib.FrozenImporter'>",
+[virtualenv:virtualenv.run.session]       "<class '_frozen_importlib_external.PathFinder'>"
+[virtualenv:virtualenv.run.session]     ],
+[virtualenv:virtualenv.run.session]     "fs_encoding": "utf-8",
+[virtualenv:virtualenv.run.session]     "io_encoding": "utf-8"
+[virtualenv:virtualenv.run.session]   },
+[virtualenv:virtualenv.run.session]   "version": "3.11.13 (main, Jun 16 2025, 10:41:54) [GCC 13.3.0]",
+[virtualenv:virtualenv.run.session]   "makefile_filename": "/home/pudimi/.pyenv/versions/3.11.13/lib/python3.11/config-3.11-x86_64-linux-gnu/Makefile",
+[virtualenv:virtualenv.run.session]   "os": "<module 'os' (frozen)>",
+[virtualenv:virtualenv.run.session]   "site": "<module 'site' (frozen)>",
+[virtualenv:virtualenv.run.session]   "datetime": "<module 'datetime' from '/home/pudimi/.pyenv/versions/3.11.13/lib/python3.11/datetime.py'>",
+[virtualenv:virtualenv.run.session]   "math": "<module 'math' from '/home/pudimi/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload/math.cpython-311-x86_64-linux-gnu.so'>",
+[virtualenv:virtualenv.run.session]   "json": "<module 'json' from '/home/pudimi/.pyenv/versions/3.11.13/lib/python3.11/json/__init__.py'>"
+[virtualenv:virtualenv.run.session] }
+[virtualenv:virtualenv.run.session] add activators for Bash, CShell, Fish, Nushell, PowerShell, Python
+[virtualenv:virtualenv.create.pyenv_cfg] write /tmp/tmpyo34piuy/.venv/pyvenv.cfg
+[virtualenv:virtualenv.create.pyenv_cfg] 	home = /home/pudimi/.pyenv/versions/3.11.13/bin
+[virtualenv:virtualenv.create.pyenv_cfg] 	implementation = CPython
+[virtualenv:virtualenv.create.pyenv_cfg] 	version_info = 3.11.13.final.0
+[virtualenv:virtualenv.create.pyenv_cfg] 	virtualenv = 20.31.2
+[virtualenv:virtualenv.create.pyenv_cfg] 	include-system-site-packages = false
+[virtualenv:virtualenv.create.pyenv_cfg] 	base-prefix = /home/pudimi/.pyenv/versions/3.11.13
+[virtualenv:virtualenv.create.pyenv_cfg] 	base-exec-prefix = /home/pudimi/.pyenv/versions/3.11.13
+[virtualenv:virtualenv.create.pyenv_cfg] 	base-executable = /home/pudimi/.pyenv/versions/3.11.13/bin/python3.11
+Checking if keyring is available
+[keyring:keyring.backend] Loading KWallet
+[keyring:keyring.backend] Loading SecretService
+[keyring:keyring.backend] Loading Windows
+[keyring:keyring.backend] Loading chainer
+[keyring:keyring.backend] Loading libsecret
+[keyring:keyring.backend] Loading macOS
+Backend 'fail Keyring' is not suitable
+No valid keyring backend was found
+Creating new session for pypi.org
+Source (PyPI): 29 packages found for scikit-build-core >=0.9
+Source (PyPI): 8 packages found for mpi4py >=3.1.5
+Source (PyPI): 104 packages found for numpy <2.0
+Source (PyPI): 27 packages found for cython >=3.0,<4.0
+Source (PyPI): 7 packages found for pathspec >=0.12.0
+Source (PyPI): 6 packages found for packaging >=23.2
+Source (PyPI): 1 packages found for scikit-build-core >=0.9
+Source (PyPI): 1 packages found for mpi4py >=3.1.5
+Source (PyPI): 1 packages found for numpy <2.0
+Source (PyPI): 1 packages found for cython >=3.0,<4.0
+Source (PyPI): 1 packages found for pathspec >=0.12.0
+Source (PyPI): 1 packages found for packaging >=23.2
+Skipping wheel mpi4py-4.1.1-cp310-abi3-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-abi3-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp310-cp310-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-abi3-win_amd64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-cp310-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-cp310-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp310-cp310-win_amd64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp311-cp311-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-cp310-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp311-cp311-win_amd64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-cp310-win_amd64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp312-cp312-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-musllinux_1_1_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp311-cp311-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-musllinux_1_1_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp311-cp311-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-win32.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp312-cp312-win_amd64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp311-cp311-win_amd64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp313-cp313-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp311-cp311-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp312-cp312-macosx_10_13_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp311-cp311-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp312-cp312-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp312-cp312-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp313-cp313-win_amd64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp311-cp311-musllinux_1_1_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp314-cp314-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp311-cp311-musllinux_1_1_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp312-cp312-win_amd64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp311-cp311-win32.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313-macosx_10_13_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp311-cp311-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp314-cp314-win_amd64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp38-cp38-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp38-cp38-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313t-macosx_10_13_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313t-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp38-cp38-win_amd64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-musllinux_1_1_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313t-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-musllinux_1_1_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313t-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313t-win_amd64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-win32.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313-win_amd64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314-macosx_10_13_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-manylinux2014_armv7l.manylinux_2_17_armv7l.manylinux_2_31_armv7l.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-musllinux_1_2_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314t-macosx_10_13_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-musllinux_1_2_armv7l.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-musllinux_1_1_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314t-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-musllinux_1_2_i686.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-musllinux_1_1_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314t-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-musllinux_1_2_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-win32.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314t-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-win32.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314t-win_amd64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-win_arm64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-pp39-pypy39_pp73-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314-win_amd64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-pp39-pypy39_pp73-win_amd64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-cp39-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-cp39-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp38-cp38-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp38-cp38-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-cp39-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp38-cp38-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp38-cp38-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp38-cp38-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp39-cp39-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp39-cp39-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp39-cp39-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp39-cp39-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp39-cp39-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-pp311-pypy311_pp73-macosx_10_15_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-pp311-pypy311_pp73-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-pp311-pypy311_pp73-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-pp311-pypy311_pp73-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-pp311-pypy311_pp73-win_amd64.whl as this is not supported by the current environment
+[build:build] Getting build dependencies for sdist...
+Source (PyPI): 29 packages found for scikit-build-core >=0.9
+Source (PyPI): 8 packages found for mpi4py >=3.1.5
+Source (PyPI): 104 packages found for numpy <2.0
+Source (PyPI): 27 packages found for cython >=3.0,<4.0
+Source (PyPI): 7 packages found for pathspec >=0.12.0
+Source (PyPI): 6 packages found for packaging >=23.2
+Source (PyPI): 1 packages found for scikit-build-core >=0.9
+Source (PyPI): 1 packages found for mpi4py >=3.1.5
+Source (PyPI): 1 packages found for numpy <2.0
+Source (PyPI): 1 packages found for cython >=3.0,<4.0
+Source (PyPI): 1 packages found for pathspec >=0.12.0
+Source (PyPI): 1 packages found for packaging >=23.2
+[build:build] Building sdist...
+Building wheel
+[virtualenv:virtualenv.discovery.builtin] find interpreter for spec PythonSpec(path=/home/pudimi/.local/share/pipx/venvs/poetry/bin/python)
+[virtualenv:virtualenv.discovery.builtin] proposed PythonInfo(spec=CPython3.11.13.final.0-64, exe=/home/pudimi/.pyenv/versions/3.11.13/bin/python3.11, platform=linux, version='3.11.13 (main, Jun 16 2025, 10:41:54) [GCC 13.3.0]', encoding_fs_io=utf-8-utf-8)
+[virtualenv:virtualenv.discovery.builtin] accepted PythonInfo(spec=CPython3.11.13.final.0-64, exe=/home/pudimi/.pyenv/versions/3.11.13/bin/python3.11, platform=linux, version='3.11.13 (main, Jun 16 2025, 10:41:54) [GCC 13.3.0]', encoding_fs_io=utf-8-utf-8)
+[virtualenv:virtualenv.run.session] create virtual environment via CPython3Posix(dest=/tmp/tmp7r0c1f0g/.venv, clear=False, no_vcs_ignore=False, global=False)
+[virtualenv:virtualenv.util.path._sync] create folder /tmp/tmp7r0c1f0g/.venv/bin
+[virtualenv:virtualenv.util.path._sync] create folder /tmp/tmp7r0c1f0g/.venv/lib/python3.11/site-packages
+[virtualenv:virtualenv.create.pyenv_cfg] write /tmp/tmp7r0c1f0g/.venv/pyvenv.cfg
+[virtualenv:virtualenv.create.pyenv_cfg] 	home = /home/pudimi/.pyenv/versions/3.11.13/bin
+[virtualenv:virtualenv.create.pyenv_cfg] 	implementation = CPython
+[virtualenv:virtualenv.create.pyenv_cfg] 	version_info = 3.11.13.final.0
+[virtualenv:virtualenv.create.pyenv_cfg] 	virtualenv = 20.31.2
+[virtualenv:virtualenv.create.pyenv_cfg] 	include-system-site-packages = false
+[virtualenv:virtualenv.create.pyenv_cfg] 	base-prefix = /home/pudimi/.pyenv/versions/3.11.13
+[virtualenv:virtualenv.create.pyenv_cfg] 	base-exec-prefix = /home/pudimi/.pyenv/versions/3.11.13
+[virtualenv:virtualenv.create.pyenv_cfg] 	base-executable = /home/pudimi/.pyenv/versions/3.11.13/bin/python3.11
+[virtualenv:virtualenv.util.path._sync] symlink /home/pudimi/.pyenv/versions/3.11.13/bin/python3.11 to /tmp/tmp7r0c1f0g/.venv/bin/python
+[virtualenv:virtualenv.create.via_global_ref.api] create virtualenv import hook file /tmp/tmp7r0c1f0g/.venv/lib/python3.11/site-packages/_virtualenv.pth
+[virtualenv:virtualenv.create.via_global_ref.api] create /tmp/tmp7r0c1f0g/.venv/lib/python3.11/site-packages/_virtualenv.py
+[virtualenv:virtualenv.run.session] ============================== target debug ==============================
+[virtualenv:virtualenv.create.creator] debug via /tmp/tmp7r0c1f0g/.venv/bin/python /home/pudimi/.local/share/pipx/venvs/poetry/lib/python3.12/site-packages/virtualenv/create/debug.py
+[virtualenv:virtualenv.run.session] {
+[virtualenv:virtualenv.run.session]   "sys": {
+[virtualenv:virtualenv.run.session]     "executable": "/tmp/tmp7r0c1f0g/.venv/bin/python",
+[virtualenv:virtualenv.run.session]     "_base_executable": "/home/pudimi/.pyenv/versions/3.11.13/bin/python3.11",
+[virtualenv:virtualenv.run.session]     "prefix": "/tmp/tmp7r0c1f0g/.venv",
+[virtualenv:virtualenv.run.session]     "base_prefix": "/home/pudimi/.pyenv/versions/3.11.13",
+[virtualenv:virtualenv.run.session]     "real_prefix": null,
+[virtualenv:virtualenv.run.session]     "exec_prefix": "/tmp/tmp7r0c1f0g/.venv",
+[virtualenv:virtualenv.run.session]     "base_exec_prefix": "/home/pudimi/.pyenv/versions/3.11.13",
+[virtualenv:virtualenv.run.session]     "path": [
+[virtualenv:virtualenv.run.session]       "/home/pudimi/.pyenv/versions/3.11.13/lib/python311.zip",
+[virtualenv:virtualenv.run.session]       "/home/pudimi/.pyenv/versions/3.11.13/lib/python3.11",
+[virtualenv:virtualenv.run.session]       "/home/pudimi/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload",
+[virtualenv:virtualenv.run.session]       "/tmp/tmp7r0c1f0g/.venv/lib/python3.11/site-packages"
+[virtualenv:virtualenv.run.session]     ],
+[virtualenv:virtualenv.run.session]     "meta_path": [
+[virtualenv:virtualenv.run.session]       "<class '_virtualenv._Finder'>",
+[virtualenv:virtualenv.run.session]       "<class '_frozen_importlib.BuiltinImporter'>",
+[virtualenv:virtualenv.run.session]       "<class '_frozen_importlib.FrozenImporter'>",
+[virtualenv:virtualenv.run.session]       "<class '_frozen_importlib_external.PathFinder'>"
+[virtualenv:virtualenv.run.session]     ],
+[virtualenv:virtualenv.run.session]     "fs_encoding": "utf-8",
+[virtualenv:virtualenv.run.session]     "io_encoding": "utf-8"
+[virtualenv:virtualenv.run.session]   },
+[virtualenv:virtualenv.run.session]   "version": "3.11.13 (main, Jun 16 2025, 10:41:54) [GCC 13.3.0]",
+[virtualenv:virtualenv.run.session]   "makefile_filename": "/home/pudimi/.pyenv/versions/3.11.13/lib/python3.11/config-3.11-x86_64-linux-gnu/Makefile",
+[virtualenv:virtualenv.run.session]   "os": "<module 'os' (frozen)>",
+[virtualenv:virtualenv.run.session]   "site": "<module 'site' (frozen)>",
+[virtualenv:virtualenv.run.session]   "datetime": "<module 'datetime' from '/home/pudimi/.pyenv/versions/3.11.13/lib/python3.11/datetime.py'>",
+[virtualenv:virtualenv.run.session]   "math": "<module 'math' from '/home/pudimi/.pyenv/versions/3.11.13/lib/python3.11/lib-dynload/math.cpython-311-x86_64-linux-gnu.so'>",
+[virtualenv:virtualenv.run.session]   "json": "<module 'json' from '/home/pudimi/.pyenv/versions/3.11.13/lib/python3.11/json/__init__.py'>"
+[virtualenv:virtualenv.run.session] }
+[virtualenv:virtualenv.run.session] add activators for Bash, CShell, Fish, Nushell, PowerShell, Python
+[virtualenv:virtualenv.create.pyenv_cfg] write /tmp/tmp7r0c1f0g/.venv/pyvenv.cfg
+[virtualenv:virtualenv.create.pyenv_cfg] 	home = /home/pudimi/.pyenv/versions/3.11.13/bin
+[virtualenv:virtualenv.create.pyenv_cfg] 	implementation = CPython
+[virtualenv:virtualenv.create.pyenv_cfg] 	version_info = 3.11.13.final.0
+[virtualenv:virtualenv.create.pyenv_cfg] 	virtualenv = 20.31.2
+[virtualenv:virtualenv.create.pyenv_cfg] 	include-system-site-packages = false
+[virtualenv:virtualenv.create.pyenv_cfg] 	base-prefix = /home/pudimi/.pyenv/versions/3.11.13
+[virtualenv:virtualenv.create.pyenv_cfg] 	base-exec-prefix = /home/pudimi/.pyenv/versions/3.11.13
+[virtualenv:virtualenv.create.pyenv_cfg] 	base-executable = /home/pudimi/.pyenv/versions/3.11.13/bin/python3.11
+Creating new session for pypi.org
+Source (PyPI): 29 packages found for scikit-build-core >=0.9
+Source (PyPI): 8 packages found for mpi4py >=3.1.5
+Source (PyPI): 104 packages found for numpy <2.0
+Source (PyPI): 27 packages found for cython >=3.0,<4.0
+Source (PyPI): 7 packages found for pathspec >=0.12.0
+Source (PyPI): 6 packages found for packaging >=23.2
+Source (PyPI): 1 packages found for scikit-build-core >=0.9
+Source (PyPI): 1 packages found for mpi4py >=3.1.5
+Source (PyPI): 1 packages found for numpy <2.0
+Source (PyPI): 1 packages found for cython >=3.0,<4.0
+Source (PyPI): 1 packages found for pathspec >=0.12.0
+Source (PyPI): 1 packages found for packaging >=23.2
+Skipping wheel mpi4py-4.1.1-cp310-abi3-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp310-cp310-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-abi3-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-abi3-win_amd64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp310-cp310-win_amd64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-cp310-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp311-cp311-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-cp310-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-musllinux_1_1_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-cp310-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp311-cp311-win_amd64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-musllinux_1_1_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp312-cp312-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-win32.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp310-cp310-win_amd64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp310-cp310-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp311-cp311-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp311-cp311-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp311-cp311-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp312-cp312-win_amd64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp311-cp311-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp313-cp313-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp311-cp311-win_amd64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp311-cp311-musllinux_1_1_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp312-cp312-macosx_10_13_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp311-cp311-musllinux_1_1_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp312-cp312-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp313-cp313-win_amd64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp311-cp311-win32.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp312-cp312-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp314-cp314-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp311-cp311-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp312-cp312-win_amd64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313-macosx_10_13_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp314-cp314-win_amd64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp38-cp38-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp38-cp38-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-musllinux_1_1_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-musllinux_1_1_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313t-macosx_10_13_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp38-cp38-win_amd64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-win32.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313t-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp312-cp312-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313t-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313t-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-manylinux2014_armv7l.manylinux_2_17_armv7l.manylinux_2_31_armv7l.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313t-win_amd64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-musllinux_1_2_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp313-cp313-win_amd64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-musllinux_1_2_armv7l.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314-macosx_10_13_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-musllinux_1_2_i686.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-musllinux_1_1_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-musllinux_1_2_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-musllinux_1_1_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-win32.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-win32.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-abi3-win_arm64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-cp39-cp39-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314t-macosx_10_13_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-cp39-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-pp39-pypy39_pp73-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314t-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-cp39-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314t-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl as this is not supported by the current environment
+Skipping wheel numpy-1.26.4-pp39-pypy39_pp73-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314t-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel cython-3.2.4-cp39-cp39-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314t-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp314-cp314-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp38-cp38-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp38-cp38-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp38-cp38-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp38-cp38-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp38-cp38-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp39-cp39-macosx_10_9_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp39-cp39-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp39-cp39-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp39-cp39-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-cp39-cp39-win_amd64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-pp311-pypy311_pp73-macosx_10_15_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-pp311-pypy311_pp73-macosx_11_0_arm64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-pp311-pypy311_pp73-manylinux1_x86_64.manylinux_2_5_x86_64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-pp311-pypy311_pp73-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel mpi4py-4.1.1-pp311-pypy311_pp73-win_amd64.whl as this is not supported by the current environment
+[build:build] Getting build dependencies for wheel...
+Source (PyPI): 24 packages found for ninja >=1.5
+Source (PyPI): 8 packages found for mpi4py >=3.1.5
+Source (PyPI): 27 packages found for cython >=3.0,<4.0
+Source (PyPI): 29 packages found for scikit-build-core >=0.9
+Source (PyPI): 104 packages found for numpy <2.0
+Source (PyPI): 7 packages found for pathspec >=0.12.0
+Source (PyPI): 6 packages found for packaging >=23.2
+Source (PyPI): 1 packages found for ninja >=1.5
+Source (PyPI): 1 packages found for mpi4py >=3.1.5
+Source (PyPI): 1 packages found for cython >=3.0,<4.0
+Source (PyPI): 1 packages found for scikit-build-core >=0.9
+Source (PyPI): 1 packages found for numpy <2.0
+Source (PyPI): 1 packages found for pathspec >=0.12.0
+Source (PyPI): 1 packages found for packaging >=23.2
+Skipping wheel ninja-1.13.0-py3-none-macosx_10_9_universal2.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-manylinux2014_i686.manylinux_2_17_i686.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-manylinux2014_ppc64le.manylinux_2_17_ppc64le.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-manylinux2014_s390x.manylinux_2_17_s390x.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-manylinux_2_28_armv7l.manylinux_2_31_armv7l.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-manylinux_2_31_riscv64.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-musllinux_1_2_aarch64.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-musllinux_1_2_armv7l.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-musllinux_1_2_i686.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-musllinux_1_2_ppc64le.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-musllinux_1_2_riscv64.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-musllinux_1_2_s390x.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-musllinux_1_2_x86_64.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-win32.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-win_amd64.whl as this is not supported by the current environment
+Skipping wheel ninja-1.13.0-py3-none-win_arm64.whl as this is not supported by the current environment
+[build:build] Building wheel...
