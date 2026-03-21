@@ -1,6 +1,6 @@
 [project]
 name = "pudimi-mpi"
-version = "0.1.3"
+version = "0.1.5"
 description = "Wrapper C++ MPI transparente com suporte a ULFM"
 authors = [
     { name = "Angelo Marcelino", email = "amc.marcelino.cordeiro@gmail.com" },
@@ -8,7 +8,7 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.11"
 # Dependências de runtime (o que o usuário final precisa)
-dependencies = ["numpy (<2.0)", "mpi4py (==3.1.4)", "setuptools (>=80.0.0)"]
+dependencies = ["numpy (<2.0)"]
 
 [tool.poetry]
 packages = [{ include = "pudimi_mpi" }]
@@ -58,3 +58,9 @@ run-numpy-test = "/opt/openmpi-5.0.8/bin/mpirun -n 2 python test_numpy_mpi.py"
 
 # Tarefa completa: limpa, compila e testa
 test = ["build-ext", "run-test", "run-numpy-test"]
+
+build-wheel = ["build-ext", { cmd = "poetry build" }]
+
+clean = "rm -rf build/ dist/ pudimi_mpi/*.so pudimi_mpi/*.cpp pudimi_mpi/*.html"
+
+rebuild-wheel = ["clean", "build-wheel"]

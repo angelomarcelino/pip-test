@@ -7,16 +7,14 @@ from setuptools import Extension, setup
 from Cython.Build import cythonize
 
 REQUIRED_LIBS = ["mpi4py", "numpy"]
+MPI_HOME = os.environ.get("MPI_HOME", "/opt/openmpi-5.0.8")
 
 
 def get_mpi_config():
     """Extrai as flags e diretórios do MPI via caminho absoluto do OpenMPI 5.0.8."""
-    # 1. Tenta usar o caminho absoluto da instalação manual
-    # Se não encontrar, tenta o que estiver no PATH (útil para portabilidade)
-    mpi_home = os.environ.get("MPI_HOME", "/opt/openmpi-5.0.8")
     mpicxx_path = (
-        os.path.join(mpi_home, "bin", "mpicxx")
-        if os.path.exists(mpi_home)
+        os.path.join(MPI_HOME, "bin", "mpicxx")
+        if os.path.exists(MPI_HOME)
         else "mpicxx"
     )
 
@@ -35,8 +33,12 @@ def get_mpi_config():
         print(f"--> MPI Detectado via: {mpicxx_path}")
         return shlex.split(c_flags), shlex.split(l_flags), lib_dirs
     except Exception as e:
-        print(f"Aviso: Não foi possível configurar o MPI via {mpicxx_path}: {e}")
-        return [], [], []
+        raise RuntimeError(
+            f"MPI não encontrado em '{mpicxx_path}'.\n"
+            f"Verifique se o OpenMPI com suporte a ULFM está instalado e defina "
+            f"MPI_HOME corretamente (atual: {MPI_HOME}).\n"
+            f"Erro original: {e}"
+        ) from e
 
 
 def add_lib_includes(include_dirs, libs):
@@ -67,7 +69,7 @@ def build(setup_kwargs):
     include_dirs = ["cpp_lib/include"]
     # Adicionamos os headers das dependências Python e do OpenMPI manual
     add_lib_includes(include_dirs, REQUIRED_LIBS)
-    include_dirs.append("/opt/openmpi-5.0.8/include")
+    include_dirs.append(os.path.join(MPI_HOME, "include"))
 
     # 4. Configurar a extensão Cython
     extensions = [
