@@ -1,6 +1,6 @@
 [project]
 name = "pudimi-mpi"
-version = "0.1.6"
+version = "0.1.7"
 description = "Wrapper C++ MPI transparente com suporte a ULFM"
 authors = [
     { name = "Angelo Marcelino", email = "amc.marcelino.cordeiro@gmail.com" },
@@ -46,6 +46,7 @@ dev = [
     "setuptools (>=80.0.0)",
     "poethepoet (>=0.42.1,<0.43.0)",
     "ruff (>=0.15.4,<0.16.0)",
+    "mpi4py (==3.1.4)",
 ]
 
 [tool.poe.tasks]
