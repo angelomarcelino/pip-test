@@ -1,6 +1,6 @@
 [project]
 name = "pudimi-mpi"
-version = "0.1.5"
+version = "0.1.6"
 description = "Wrapper C++ MPI transparente com suporte a ULFM"
 authors = [
     { name = "Angelo Marcelino", email = "amc.marcelino.cordeiro@gmail.com" },
@@ -26,6 +26,7 @@ include = [
     ] },
     { path = "pudimi_mpi/*.so", format = "wheel" },
 ]
+exclude = ["pudimi_mpi/*.html", "pudimi_mpi/*.pyx", "pudimi_mpi/*.pxd"]
 build = "build.py"
 
 [build-system]

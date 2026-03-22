@@ -78,7 +78,12 @@ def build(setup_kwargs):
             sources=["pudimi_mpi/bridge.pyx", "cpp_lib/src/mpi_core.cpp"],
             include_dirs=include_dirs,
             language="c++",
-            extra_compile_args=["-O3", "-std=c++11"] + mpi_compile_args,
+            extra_compile_args=[
+                "-O3",
+                "-std=c++11",
+                "-DNPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION",
+            ]
+            + mpi_compile_args,
             extra_link_args=mpi_link_args + rpath_flags,
         )
     ]
